@@ -91,9 +91,9 @@ jobs:
           [ -e $CONFIG_FILE_FULL ] && mv $CONFIG_FILE_FULL friendlywrt-rk3399/friendlywrt/.config
           cd friendlywrt-rk3399/friendlywrt
           make defconfig
-          [ -e $CONFIG_FILE ] && mv $CONFIG_FILE friendlywrt-rk3399/configs
-          cd friendlywrt-rk3399/device/friendlyelec/rk3399
-          sed -i 's/TARGET_FRIENDLYWRT_CONFIG=config_rk3399/TARGET_FRIENDLYWRT_CONFIG=$CONFIG_FILE/' nanopi_m4.mk
+      #    [ -e $CONFIG_FILE ] && mv $CONFIG_FILE friendlywrt-rk3399/configs
+      #    cd friendlywrt-rk3399/device/friendlyelec/rk3399
+      #    sed -i 's/TARGET_FRIENDLYWRT_CONFIG=config_rk3399/TARGET_FRIENDLYWRT_CONFIG=$CONFIG_FILE/' nanopi_m4.mk
 
       #如果环境变量设置为true,执行到此步骤时会弹出几行信息，上面有ssh的命令和https的链接，可选择在终端通过ssh链接修改配置或者通过web连接修改
       - name: SSH connection to Actions
